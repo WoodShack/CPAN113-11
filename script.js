@@ -14,3 +14,7 @@ class ProductProperties{
         return "Product: "+this.name+", Price: "+this.price+",  Quantity: "+this.qty;
     }
 }
+
+class PerishableProductProperties extends ProductProperties{
+    
+}
