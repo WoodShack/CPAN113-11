@@ -1,3 +1,4 @@
+//Classes
 class ProductProperties{
     constructor(name,price,qty){
         this.name = name;
@@ -5,16 +6,19 @@ class ProductProperties{
         this.qty = qty;
     }
 
+    //Returns the total value
     getTotalValue(){
         return this.price*this.qty;
     }
 
+    //Product to string
     toString(){
         return "Product: "+this.name+
                ", Price: "+this.price+
-               ",  Quantity: "+this.qty;
+               ", Quantity: "+this.qty;
     }
 
+    //Apply discount to an array of products
     static applyDiscount(products, discount){
         for (const product of products){
             product.price = product.price * (1.0 - discount)
@@ -28,6 +32,7 @@ class PerishableProductProperties extends ProductProperties{
         this.exp = exp;
     }
 
+    //Perishable product to string
     toString(){
         return "Product: "+this.name+
                ", Price: "+this.price+
@@ -38,13 +43,16 @@ class PerishableProductProperties extends ProductProperties{
 
 class Store{
     constructor(){
+        //Initialize inventory array
         this.inventory = [];
     }
 
+    //Add a product to the inventory array
     addProduct(product){
         this.inventory.push(product);
     }
 
+    //Returns the total value of the inventory
     getInventoryValue(){
         let value = 0;
 
@@ -55,6 +63,7 @@ class Store{
         return value;
     }
 
+    //Find a product using it's name
     findProductByName(name){
         for (const product of this.inventory){
             if(product.name === name){
@@ -75,7 +84,6 @@ console.log(cheese.toString()+" Total Value: $"+cheese.getTotalValue());
 
 // Part 5
 let myStore = new Store();
-
 let canOfBeans = new ProductProperties("Can Of Beans",1,10);
 let mrNoodles = new ProductProperties("Mr.Noodles",2,7);
 let tuna = new ProductProperties("Tuna",3,3);
