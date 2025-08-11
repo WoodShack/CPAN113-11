@@ -16,7 +16,8 @@ class ProductProperties{
 }
 
 class PerishableProductProperties extends ProductProperties{
-    constructor(name,price,qty){
+    constructor(name,price,qty,exp){
         super(name,price,qty);
+        this.exp = exp;
     }
 }
