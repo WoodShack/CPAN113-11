@@ -20,4 +20,11 @@ class PerishableProductProperties extends ProductProperties{
         super(name,price,qty);
         this.exp = exp;
     }
+
+    toString(){
+        return "Product: "+this.name+
+               ", Price: "+this.price+
+               ", Quantity: "+this.qty+
+               ", Expiration: "+this.exp;
+    }
 }
