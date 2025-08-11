@@ -1,6 +1,6 @@
 class ProductProperties{
     
-    constructor(){
-        
+    constructor(name){
+        this.name = name
     }
 }
