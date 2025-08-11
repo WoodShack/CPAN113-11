@@ -39,6 +39,10 @@ class Store{
     constructor(){
         this.inventory = [];
     }
+
+    addProduct(product){
+        this.inventory.push(product);
+    }
 }
 
 //Part 2 Task
