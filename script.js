@@ -13,6 +13,12 @@ class ProductProperties{
     toString(){
         return "Product: "+this.name+", Price: "+this.price+",  Quantity: "+this.qty;
     }
+
+    static applyDiscount(products, discount){
+        for (const product of products){
+            product.price = product.price * (1.0 - discount)
+        }
+    }
 }
 
 class PerishableProductProperties extends ProductProperties{
