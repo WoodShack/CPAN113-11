@@ -72,3 +72,9 @@ let cheese = new PerishableProductProperties("Cheese",3,5,"Aug 16, 2025");
 console.log(milk.toString()+" Total Value: $"+milk.getTotalValue());
 console.log(cheese.toString()+" Total Value: $"+cheese.getTotalValue());
 
+// Part 5
+let canOfBeans = new ProductProperties("Can Of Beans",1,10);
+let mrNoodles = new ProductProperties("Mr.Noodles",2,7);
+let tuna = new ProductProperties("Milk",3,3);
+let skimMilk = new PerishableProductProperties("Milk",6,2,"Aug 19, 2025");
+let cottageCheese = new PerishableProductProperties("Cheese",7,5,"Aug 20, 2025");
