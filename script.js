@@ -1,5 +1,4 @@
 class ProductProperties{
-    
     constructor(name,price,qty){
         this.name = name;
         this.price = price;
@@ -11,7 +10,9 @@ class ProductProperties{
     }
 
     toString(){
-        return "Product: "+this.name+", Price: "+this.price+",  Quantity: "+this.qty;
+        return "Product: "+this.name+
+               ", Price: "+this.price+
+               ",  Quantity: "+this.qty;
     }
 
     static applyDiscount(products, discount){
