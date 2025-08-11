@@ -77,12 +77,17 @@ let myStore = new Store();
 
 let canOfBeans = new ProductProperties("Can Of Beans",1,10);
 let mrNoodles = new ProductProperties("Mr.Noodles",2,7);
-let tuna = new ProductProperties("Milk",3,3);
-let skimMilk = new PerishableProductProperties("Milk",6,2,"Aug 19, 2025");
-let cottageCheese = new PerishableProductProperties("Cheese",7,5,"Aug 20, 2025");
+let tuna = new ProductProperties("Tuna",3,3);
+let skimMilk = new PerishableProductProperties("Skim Milk",6,2,"Aug 19, 2025");
+let cottageCheese = new PerishableProductProperties("Cottage Cheese",7,5,"Aug 20, 2025");
 
 myStore.addProduct(canOfBeans);
 myStore.addProduct(mrNoodles);
 myStore.addProduct(tuna);
 myStore.addProduct(skimMilk);
 myStore.addProduct(cottageCheese);
+
+console.log("myStore value before discount: $"+myStore.getInventoryValue());
+ProductProperties.applyDiscount(myStore.inventory,0.15);
+console.log("myStore value after discount: $"+myStore.getInventoryValue());
+console.log("Find tuna: "+myStore.findProductByName("Tuna"))
