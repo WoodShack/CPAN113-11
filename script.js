@@ -46,12 +46,22 @@ class Store{
 
     getInventoryValue(){
         let value = 0;
-        
+
         for (const product of this.inventory){
             value += product.getTotalValue();
         }
 
         return value;
+    }
+
+    findProductByName(name){
+        for (const product of this.inventory){
+            if(product.name === name){
+                return product;
+            }
+        }
+
+        return null;
     }
 }
 
