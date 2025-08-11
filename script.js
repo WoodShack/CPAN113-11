@@ -35,9 +35,16 @@ class PerishableProductProperties extends ProductProperties{
     }
 }
 
+class Store{
+    constructor(){
+        this.inventory = [];
+    }
+}
+
 //Part 2 Task
 let milk = new PerishableProductProperties("Milk",5,3,"Aug 17, 2025");
 let cheese = new PerishableProductProperties("Cheese",3,5,"Aug 16, 2025");
 
 console.log(milk.toString()+" Total Value: $"+milk.getTotalValue());
 console.log(cheese.toString()+" Total Value: $"+cheese.getTotalValue());
+
