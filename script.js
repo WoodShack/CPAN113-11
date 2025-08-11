@@ -9,4 +9,8 @@ class ProductProperties{
     getTotalValue(){
         return this.price*this.qty;
     }
+
+    toString(){
+        return "Product: "+this.name+", Price: "+this.price+",  Quantity: "+this.qty;
+    }
 }
